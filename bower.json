@@ -1,0 +1,21 @@
+{
+  "name": "@mjleitch/epic-carousel",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Max Leitch <mjleitch@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/epic-web-components/epic-carousel",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "webcomponentsjs": "webcomponents.js#~0.7.20"
+  }
+}

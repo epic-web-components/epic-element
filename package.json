@@ -1,0 +1,31 @@
+{
+  "name": "@mjleitch/epic-carousel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:babel": "babel src --out-dir lib",
+    "build:browserify": "browserify lib/epic-carousel.js --outfile dist/epic-carousel.js",
+    "build:css": "stylus assets/styles/main.styl > dist/main.css",
+    "build:html": "jade assets/html/index.jade > dist/index.html",
+    "build": "npm run build:babel && npm run build:browserify",
+    "build:watch": "watch 'npm run build:babel' ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epic-web-components/epic-carousel.git"
+  },
+  "author": "Max Leitch <mjleitch@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/epic-web-components/epic-carousel/issues"
+  },
+  "homepage": "https://github.com/epic-web-components/epic-carousel#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "watch": "^0.17.1",
+    "watchify": "^3.7.0"
+  }
+}
