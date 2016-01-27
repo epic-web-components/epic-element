@@ -7,6 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:babel": "babel src --out-dir lib",
     "build:browserify": "browserify lib/epic-carousel.js --outfile dist/epic-carousel.js",
+    "build:babelify": "browserify src/epic-carousel.js -o dist/epic-carousel.js -t [ babelify --presets [ es2015 ] ]",
+    "watch:babelify": "watchify src/epic-carousel.js -o dist/epic-carousel.js -t [ babelify --presets [ es2015 ] ]",
     "build:css": "stylus assets/styles/main.styl > dist/main.css",
     "build:html": "jade assets/html/index.jade > dist/index.html",
     "build": "npm run build:babel && npm run build:browserify",

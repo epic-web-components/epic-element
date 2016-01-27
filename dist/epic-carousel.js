@@ -47,4 +47,5 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
     document.registerElement('date-widget', DateWidget);
 })();
+
 },{}]},{},[1]);
