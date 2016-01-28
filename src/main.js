@@ -4,11 +4,10 @@
 
         </style>
         <div class="container">
-
+          <content></content>
         </div>
     `;
-    class DateWidget extends HTMLElement {
-
+    class EpicElement extends HTMLElement {
         // Fires when an instance of the element is created.
         createdCallback() {
             this.createShadowRoot().innerHTML = template;
@@ -19,8 +18,11 @@
         };
         // Fires when an attribute was added, removed, or updated.
         attributeChangedCallback(attrName, oldVal, newVal) {
-          console.log(attrName);
+          console.log('attributeChangedCallback');
+          console.log('attrName', attrName);
+          console.log('oldVal', oldVal);
+          console.log('newVal', newVal);
         };
     }
-    document.registerElement('date-widget', DateWidget);
+    document.registerElement('epic-element', EpicElement);
 })();

@@ -10,18 +10,18 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 (function () {
-    var template = '\n        <style>\n\n        </style>\n        <div class="container">\n\n        </div>\n    ';
+    var template = '\n        <style>\n\n        </style>\n        <div class="container">\n          <content></content>\n        </div>\n    ';
 
-    var DateWidget = function (_HTMLElement) {
-        _inherits(DateWidget, _HTMLElement);
+    var EpicElement = function (_HTMLElement) {
+        _inherits(EpicElement, _HTMLElement);
 
-        function DateWidget() {
-            _classCallCheck(this, DateWidget);
+        function EpicElement() {
+            _classCallCheck(this, EpicElement);
 
-            return _possibleConstructorReturn(this, Object.getPrototypeOf(DateWidget).apply(this, arguments));
+            return _possibleConstructorReturn(this, Object.getPrototypeOf(EpicElement).apply(this, arguments));
         }
 
-        _createClass(DateWidget, [{
+        _createClass(EpicElement, [{
             key: 'createdCallback',
 
             // Fires when an instance of the element is created.
@@ -38,14 +38,17 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
             // Fires when an attribute was added, removed, or updated.
             value: function attributeChangedCallback(attrName, oldVal, newVal) {
-                console.log(attrName);
+                console.log('attributeChangedCallback');
+                console.log('attrName', attrName);
+                console.log('oldVal', oldVal);
+                console.log('newVal', newVal);
             }
         }]);
 
-        return DateWidget;
+        return EpicElement;
     }(HTMLElement);
 
-    document.registerElement('date-widget', DateWidget);
+    document.registerElement('epic-element', EpicElement);
 })();
 
 },{}]},{},[1]);
